@@ -41,13 +41,11 @@ export const GlobalProvider = ({ children }) => {
   }, [state]);
 
   return (
-    <GlobalContext.Provider
-      value={{
-        watchlist: state.watchlist,
-        watched: state.watched,
-        dispatch,
-      }}
-    >
+    <GlobalContext.Provider value={{
+      watchlist: state.watchlist,
+      watched: state.watched,
+      dispatch,
+    }}>
       {children}
     </GlobalContext.Provider>
   );
